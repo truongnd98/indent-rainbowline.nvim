@@ -94,14 +94,14 @@ local function make_opts(blank_opts, rainbow_opts)
 	local hl_colors = make_hl_groups({
 		colors = rainbow_opts.colors,
 		color_transparency = rainbow_opts.color_transparency,
-		hl = { blank_opts.indent.highlight or "IblIndent", "Normal" },
+		hl = blank_opts.indent.highlight or { "IblIndent", "Normal" },
 		prefix = "RainbowColor",
 		auto_setup = true,
 	})
 	local hl_context_colors = make_hl_groups({
 		colors = rainbow_opts.colors,
 		color_transparency = rainbow_opts.color_transparency,
-		hl = { blank_opts.scope.highlight or "IblScope", "Whitespace", "Normal" },
+		hl = blank_opts.scope.highlight or { "IblScope", "Whitespace", "Normal" },
 		prefix = "RainbowColorScope",
 		auto_setup = true,
 	})
